@@ -117,18 +117,9 @@ a{
     color: #3b2d2c;
 }
 
-/* .result-table .p-datatable-thead > tr > th {
-  background-color: #6b4e2d;
-  color: #FDF6E3;
-  font-size: 1rem;
-  text-align: center;
-  border: 1px solid #6b4e2d;
-} */
 
 .result-table th{
   padding: 9px;
-  /* background: linear-gradient(to bottom, #6a4f4b, #3b2f2f); */
-  /* color: #d4af37; */
   font-size: 14px;
   text-transform: uppercase;
   border: 1px solid #8b4513;
