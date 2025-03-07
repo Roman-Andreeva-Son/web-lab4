@@ -1,0 +1,411 @@
+body{
+  margin: 0;
+  min-height: 100vh;
+  background: url("./assets/scale_1200.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  /* Дополнительно можно задать общий шрифт для всей страницы */
+  font-family: 'Old Standard TT', serif;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  font-family: Cormorant Garamond;
+}
+
+.authenticate-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  color:burlywood;
+}
+
+.pagination-btn-container{
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.pagination-btn-container > p{
+  padding-top: 4%;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  color: darkgoldenrod;
+}
+
+.authenticate-form-container{
+  margin-top: 10vh;
+  margin-bottom: 10rem;
+}
+
+#main-form > input{
+  color: burlywood;
+  background-color: brown;
+  border-color: darkgoldenrod;
+}
+
+#main-form > input:hover{
+  background: linear-gradient(145deg, #8b4513, #6a4f4b); /* Светлее при наведении */
+  box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.6);
+}
+
+#main-form > input:focus{
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+.result-table{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #3b2f2f; /* Цвет состаренного дерева */
+  color: #f8c471; /* Латунь или медь */
+  font-family: Cormorant Garamond;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  border: 2px solid #a0522d; /* Рамка из меди */
+}
+
+nav {
+  background: linear-gradient(145deg, #6a4f4b, #3b2f2f); /* Состаренный металл */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #8b4513; /* Медная граница */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+  color: #f8c471; /* Латунный цвет */
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 15px;
+  font-family: 'Cinzel', serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: #d4af37; /* Золотой */
+  text-shadow: 0px 0px 5px rgba(212, 175, 55, 0.8);
+}
+
+p{
+  font-family: Cormorant Garamond  ;
+}
+
+label{
+  font-family: Cormorant Garamond  ;
+}
+
+a{
+  font-family: Cormorant Garamond  ;
+}
+
+header{
+  /* background: linear-gradient(to bottom, #6a4f4b, #3b2f2f); */
+  /* display: flex;
+  justify-content: space-between;
+  border: 3px solid #454001; */
+}
+
+header p{
+  /* font-family: Cinzel; */
+  /* color: burlywood; */
+}
+
+.result-table th{
+  padding: 9px;
+  background: linear-gradient(to bottom, #6a4f4b, #3b2f2f); /* Текстура состаренного металла */
+  color: #d4af37; /* Золотистый текст */
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid #8b4513;
+  letter-spacing: 1px;
+  font-family: Cinzel;
+}
+
+.result-table td {
+  padding: 7px;
+  border: 1px solid #8b4513; /* Медные границы */
+  background-color: #3b2f2f; /* Деревянный фон */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.first-pagination-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.sec-pagination-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.pagination-btn{
+  background-color: darkgoldenrod;
+  color: gold;
+  border-color:darkgoldenrod ;
+}
+
+select{
+  background: brown; /* Медный фон с текстурой linear-gradient(145deg, #752d22, #7d0808)*/
+  color: #f8c471; /* Латунный текст */
+  font-family: 'Georgia', serif; /* Винтажный шрифт */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #8b4513; /* Медная рамка */
+  border-radius: 5px;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.4); /* Внутренняя тень */
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  appearance: none; /* Убираем стандартный стиль браузера */
+}
+
+select:focus{
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+canvas{
+  max-height: 400px;
+  min-height: 400px;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+select:hover{
+  background: linear-gradient(145deg, #8b4513, #6a4f4b); /* Светлее при наведении */
+  box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.6);
+}
+
+option{
+  border: 1px solid darkgoldenrod;
+  text-align: center;
+}
+
+option:hover{
+  background-color:antiquewhite;
+}
+
+nav{
+  display: flex;
+  align-items: end;
+  padding: 0.5rem;
+  color: burlywood;
+}
+
+#set-r-btn{
+  background: linear-gradient(145deg, #4d3935, #6a4f4b); /* Тёмный металл с медной текстурой */
+  color: #d4af37; /* Золотистый текст */
+  font-size: 14px;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #8b4513; /* Медная рамка */
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+  text-shadow: 0px 0px 3px rgba(212, 175, 55, 0.5); /* Золотистый эффект */
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#set-r-btn:hover{
+  background: linear-gradient(145deg, #6a4f4b, #8b4513); /* Более светлая текстура */
+  transform: scale(1.05);
+}
+
+#submit-btn-main{
+  background: linear-gradient(145deg, #8b4513, #d4af37); /* Градиент меди и золота */
+  color: #ffffff; /* Белый текст */
+  font-size: 16px;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: 2px solid #6a4f4b; /* Медная рамка */
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Тень */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#submit-btn-main:hover{
+  transform: scale(1.1);
+  background: radial-gradient(circle, #d4af37, #8b4513);
+  box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.8);
+}
+
+.logout-a:hover{
+  cursor: pointer;
+}
+
+#main-form{
+  color: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-table{
+  color: burlywood;
+}
+
+.r-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.r-container > button{
+  padding: 0.3rem;
+}
+
+.main-page{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container{
+  padding: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.authenticate-form > button{
+  background-color:burlywood;
+  color:#4f2206;
+  font-family:'tasty';
+  font-weight: bold;
+  border-color: burlywood;
+}
+
+.authenticate-form > input{
+  width: 25vw;
+  height: 5vh;
+  font-size: 20px;
+  background-color: black;
+  color:antiquewhite;
+}
+
+label, label+input{
+  margin-bottom: 1rem;
+}
+
+.normal-input{
+  border-color:darkgoldenrod;
+}
+
+.normal-input:focus{
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+.warning-input{
+  border-color: brown;
+}
+
+.start-a{
+  color: chocolate;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.start-a:hover{
+  cursor: pointer;
+}
+
+.tab-content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-top-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh;
+  margin-bottom: 5vh;
+}
+
+
+.mobile-content-container{
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+}
+
+.mobile-main-form-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+}
+
+#mobile-main-form{
+  margin-bottom: 5vh;
+}
+
+.mobile-main-form-content div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mobile-r-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: 813px) and (max-width: 1051px){
+  .login-p{
+    font-size: 1.2rem !important;
+    width: 18vw !important;
+  }
+  .authenticate-form > button{
+    margin-top: 5vh;
+    border-radius: 20px;
+    width: 25vw;
+    height: 7vh;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 812px) {
+  .login-p{
+    font-size: 1rem !important;
+    width: 18vw !important;
+  }
+  .authenticate-form > button{
+    margin-top: 5vh;
+    border-radius: 20px;
+    width: 25vw;
+    height: 7vh;
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1052px){
+  .authenticate-form > button{
+    font-size: 1.2rem;
+  }
+  .authenticate-form > button{
+    margin-top: 5vh;
+    border-radius: 20px;
+    width: 25vw;
+    height: 7vh;
+    font-size: 1.5rem;
+  }
+}

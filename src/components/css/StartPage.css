@@ -1,0 +1,27 @@
+.renessans-header{
+    background-color: rgba(253, 246, 227, 0.7);;
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/old_map.png");
+    color: #3b2d2c;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+    border-bottom: 2px solid #6b4e2d;
+}
+.renessans-header h1{
+margin: 0;
+  font-size: 3rem;
+}
+.renessans-header p{
+    margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.start-p{
+    font-size: 18px;
+    color:#3b2d2c;
+    margin-bottom: 0%;
+}
+
+label, label+input{
+    margin-bottom: 1rem;
+}

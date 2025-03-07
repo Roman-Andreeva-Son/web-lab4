@@ -1,0 +1,40 @@
+.prime-main-form{
+    background-color: rgba(253, 246, 227, 0.9);
+    border: 2px solid hsl(32, 41%, 30%);
+    border-radius: 8px;
+    width: 25rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    color: #3b2d2c;
+}
+
+.r-error-message{
+    color:chocolate;
+}
+
+.x-options-container{
+    padding: 2vh;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.x-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.draw-button{
+  background-color: #6b4e2d;
+  color: #FDF6E3;
+  font-family: 'Old Standard TT', serif;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  transition: background-color 0.3s ease;
+}

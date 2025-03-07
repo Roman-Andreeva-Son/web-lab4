@@ -1,0 +1,14 @@
+.main-header{
+    background-color: rgba(253, 246, 227, 0.7);;
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/old_map.png");
+    color: #3b2d2c;
+    padding: 1rem;
+    text-align: right;
+    font-family: 'Old Standard TT', serif;
+    border-bottom: 2px solid #6b4e2d;
+    bottom: 0;
+}
+
+/* .main-header a{
+
+} */

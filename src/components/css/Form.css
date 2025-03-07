@@ -1,0 +1,35 @@
+.renaissance-form-container {
+    /* Светлый оттенок «пергамента», чуть прозрачный */
+    background-color: rgba(253, 246, 227, 0.9);
+    border: 2px solid #6b4e2d;
+    border-radius: 8px;
+    width: 25rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    color: #3b2d2c;
+  }
+  
+  .renaissance-form-container label {
+    color: #3b2d2c;
+    font-weight: bold;
+  }
+  
+  .renaissance-form-container .p-inputtext,
+  .renaissance-form-container .p-password {
+    border: 1px solid #6b4e2d;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .renaissance-form-container .p-button {
+    background-color: #6b4e2d;
+    border-color: #6b4e2d;
+    font-family: 'Old Standard TT', serif;
+    margin-top: 1rem;
+  }
+  
+  .renaissance-form-container .p-button:hover {
+    background-color: #84613e;
+    border-color: #84613e;
+  }
