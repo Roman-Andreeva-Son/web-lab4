@@ -1,7 +1,6 @@
 package com.ozhegov.laba4_backend.controller;
 
 import com.google.gson.Gson;
-import com.ozhegov.laba4_backend.Util;
 import com.ozhegov.laba4_backend.model.Point;
 import com.ozhegov.laba4_backend.bean.PointsBean;
 import jakarta.inject.Inject;
@@ -10,6 +9,8 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
+import java.util.List;
 
 @Path("/points")
 @Produces(MediaType.APPLICATION_JSON)
@@ -35,11 +36,9 @@ public class PointsResource {
             return Response.status(403).entity("You're not allowed for this resource").build();
         if(x==null || y==null || r==null)
             return Response.status(400).entity("You have to pass all parameters").build();
-        if(!Util.validatePointParameters(x,y,r))
-            return Response.status(400).entity("Parameters have to be digits").build();
 
-        Point storedPoint = pointsBean.storePoint(x, y, r, startTime);
-        String json = new Gson().toJson(storedPoint);
+        List<Point> storedPoints = pointsBean.storePoint(x, y, r, startTime);
+        String json = new Gson().toJson(storedPoints);
         return Response.status(201).entity(json).build();
     }
 }

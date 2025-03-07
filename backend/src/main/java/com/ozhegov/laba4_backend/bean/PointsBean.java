@@ -5,6 +5,8 @@ import com.ozhegov.laba4_backend.model.Point;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Stateless
@@ -16,20 +18,24 @@ public class PointsBean {
         return pointDAO.getAll();
     }
 
-    public Point storePoint(String strX, String strY, String strR, long startTime){
-        double x = Double.parseDouble(strX);
+    public List<Point> storePoint(String strX, String strY, String strR, long startTime){
+        double[] xs = Arrays.stream(strX.split(",")).mapToDouble(Double::parseDouble).toArray();
         double y = Double.parseDouble(strY);
         double r = Double.parseDouble(strR);
 
-        Point point = new Point(x, y, r);
-        if(isIntoArea(x,y,r))
-            point.setResult("попал");
-        else
-            point.setResult("не попал");
-        point.setExecutionTime(System.nanoTime() - startTime);
+        List<Point> points = new ArrayList<>();
+        for(double x: xs) {
+            Point point = new Point(x, y, r);
+            if (isIntoArea(x, y, r))
+                point.setResult("попал");
+            else
+                point.setResult("не попал");
+            point.setExecutionTime(System.nanoTime() - startTime);
 
-        pointDAO.create(point);
-        return point;
+            pointDAO.create(point);
+            points.add(point);
+        }
+        return points;
     }
 
     public boolean isIntoArea(double x, double y, double r){
