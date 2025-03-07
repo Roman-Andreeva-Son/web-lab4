@@ -40,6 +40,8 @@ export const MainForm = (props) => {
         params.append('y', y);
         params.append('r',localR);
 
+        console.log(params.get(x));
+
         const resp = await fetch('http://localhost:8080/laba4_backend-1.0-SNAPSHOT/api/points', {
             method: 'POST',
             credentials: 'include',
@@ -214,7 +216,7 @@ export const MainForm = (props) => {
                             <Checkbox inputId="cb9" value={5} onChange={handleAddR} checked={localR.includes(5)}/>
                         </div>
                         <div className="x-option">
-                            <Button className="draw-button" type="button" onClick={handleSetRBtn}>Draw</Button>
+                            <Button className="draw-button" type="button" onClick={handleSetRBtn}>Нарисовать</Button>
                         </div>
                     </div>
                 </div>
@@ -222,7 +224,7 @@ export const MainForm = (props) => {
                     <p className="r-error-message">{error}</p>
                 </div>
                 <div className="p-field">
-                    <Button type="submit" id="submit-btn-main">Submit</Button>
+                    <Button type="submit" id="submit-btn-main">Отправить</Button>
                 </div>
             </form>
         </Card>

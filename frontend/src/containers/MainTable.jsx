@@ -1,6 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setPage } from "./mainSlice";
 import { useEffect } from "react";
+import {DataTable} from 'primereact/datatable'
+import {Column} from 'primereact/column'
+import './css/MainTable.css'
 
 export const MainTable = (props) => {
     const points = useSelector((state) => state.main.points);
@@ -12,9 +15,8 @@ export const MainTable = (props) => {
     useEffect(() => {
         props.diagram.current.fillCanvas(r);
     }, [page])
-
     return (
-        <div>
+        <div className="table-component-container">
             <table className="result-table">
                 <thead>
                     <tr>
